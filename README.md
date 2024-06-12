@@ -1,14 +1,14 @@
 # PonziSleuth
 
-Official code for "SemanticSleuth:IdentifyingPonziContractsviaLargeLanguage Models".
+Official code for "SemanticSleuth: Identifying Ponzi Contracts via Large Language Models".
 
 For ease of use, we have made some changes to the original implementation in the paper.
 
 ## Usage
 
-**Linux**
+### Linux
 
-Clone the repo, change directory to the root of the repo directory and run:
+**Clone the repo, change directory to the root of the repo directory and run:**
 
 - Optionally, create a virtual environment
     ```bash
@@ -20,7 +20,7 @@ Clone the repo, change directory to the root of the repo directory and run:
     conda activate PonziSleuth
     ```
 
-    If you use other vitural environment manager, make sure that the python version of the virtural environment is `>=3.10.14`
+    If you use other vitural environment managers, make sure that the python version of the virtural environment is `>=3.10.14`
 
 - Install PonziSleuth python package
     ```bash
@@ -28,6 +28,7 @@ Clone the repo, change directory to the root of the repo directory and run:
     ```
 
 - Setting environment variables
+
     To use the services of openai and etherscan, provide your own api key as environment variables:
     ```bash
     export OPENAI_API_KEY=your key
@@ -35,6 +36,7 @@ Clone the repo, change directory to the root of the repo directory and run:
     ```
 
 - In a new terminal, install Ollama and pull models
+
     Use Ollama to interact with open source LLMs
     ```bash
     curl -fsSL https://ollama.com/install.sh | sh
@@ -45,18 +47,19 @@ Clone the repo, change directory to the root of the repo directory and run:
     ollama serve
     ```
 
-    Pull model from Ollama server
+    Pull model from Ollama server in another terminal
     ```bash
     ollama pull llama3
     ```
 
-- Go back to the terminal with environment variables, run the test
+- Go back to the terminal with environment variables of the api key, run the test
+
     Everthing prepared right now, run a small test:
     ```bash
     bash test/test.sh
     ```
     
-- If the test didn't go wrong, the following command should work
+- If the test doesn't go wrong, detection result will output to `result` directory and the following command should work: 
     ```bash
     # help
     PonziSleuth --help
@@ -65,3 +68,4 @@ Clone the repo, change directory to the root of the repo directory and run:
     PonziSleuth -p(-f) /path/to/file(/filename) -m model -t temperature
     ```
     
+**Then try this tool as your wish**
