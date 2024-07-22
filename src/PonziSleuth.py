@@ -388,20 +388,21 @@ def singal(addr: str, file_path: str):
     if index < 0 or break_flag:
         print('CompileFailed...')
 
-    # PonziSleuth
-    if snippet == '```solidity\n```': 
-        snippet = '```solidity\n' + text + '\n```'
+    else:
+        # PonziSleuth
+        if snippet == '```solidity\n```': 
+            snippet = '```solidity\n' + text + '\n```'
 
-    if dot == 'digraph {\n\tmsg.sender;\n\tmsg.value;\n}':
-        # dot = 'In this contract, msg.sender and msg.value are not assigned to any other variables. So we can not generate a graph of dependency from this contract.\n'
-        dot = ''
+        if dot == 'digraph {\n\tmsg.sender;\n\tmsg.value;\n}':
+            # dot = 'In this contract, msg.sender and msg.value are not assigned to any other variables. So we can not generate a graph of dependency from this contract.\n'
+            dot = ''
 
-    detector = llm.Sleuth(dot, snippet, model, temperature, prompt)
-    try:
-        detector.analyse()
+        detector = llm.Sleuth(dot, snippet, model, temperature, prompt)
+        try:
+            detector.analyse()
 
-    except Exception as e:
-        print('ModelError: ', e)
+        except Exception as e:
+            print('ModelError: ', e)
 
 
 def main():
