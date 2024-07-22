@@ -23,5 +23,7 @@
 |PonziGuard |61.76% |93.75% |77.76% |
 |SourceP    |33.52% |57.03% |45.28% |
 
-- Ours no need to train
+- no need to train
+|Ours       |TPR    |TNR    |BAC    |
+|:-:        |:-:    |:-:    |:-:    |
 |PonziSleuth|92.06% |92.33% |92.20% |
