@@ -22,10 +22,12 @@
 
 - Using old contracts trained model to detect newly-collected contracts
 
-|SotA       |TPR    |TNR    |BAC    |
-|:-:        |:-:    |:-:    |:-:    |
-|PonziGuard |61.76% |93.75% |77.76% |
-|SourceP    |33.52% |57.03% |45.28% |
+|SotA           |TPR    |TNR    |BAC    |
+|:-:            |:-:    |:-:    |:-:    |
+|PonziGuard(20%)|61.76% |93.75% |77.76% |
+|SourceP(20%)   |33.52% |57.03% |45.28% |
+|PonziGuard(30%)|72.55% |86.39% |79.47% |
+|SourceP(30%)   |67.06% |72.75% |69.90% |
 
 - no need to train
 
